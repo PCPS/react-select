@@ -446,6 +446,8 @@ const Select = React.createClass({
 			onBlurredState.inputValue = '';
 		}
 		if (this.props.onBlurSelectsFocusedOption) {
+			console.log('Selecting focused!');
+			console.log(this.props);
 			this.selectFocusedOption();
 		}
 
@@ -788,7 +790,7 @@ const Select = React.createClass({
 	},
 
 	selectFocusedOption () {
-		if (this._focusedOption) {
+		if (this._focusedOption && this.state.isOpen) {
 			return this.selectValue(this._focusedOption);
 		}
 	},
