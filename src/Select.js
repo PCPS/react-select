@@ -446,8 +446,6 @@ const Select = React.createClass({
 			onBlurredState.inputValue = '';
 		}
 		if (this.props.onBlurSelectsFocusedOption) {
-			console.log('Selecting focused!');
-			console.log(this.props);
 			this.selectFocusedOption();
 		}
 
